@@ -1,0 +1,115 @@
+\documentclass[addpoints]{exam}
+
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{tikz}
+
+% Header and footer.
+\pagestyle{headandfoot}
+\runningheadrule
+\runningfootrule
+\runningheader{CS 201 DS II}{Homework 4}{Spring 2018}
+\runningfooter{}{Page \thepage\ of \numpages}{}
+\firstpageheader{}{}{}
+
+\boxedpoints
+\printanswers
+
+\title{Habib University\\CS 201 Data Structures II\\Spring 2018}
+\author{Don't Grade Me}  % replace with your ID, e.g. sh01703
+\date{Homework 4\\\numpoints\ points. Due: 19h; Monday, 12 Mar}
+
+\begin{document}
+\maketitle
+
+\begin{questions}
+
+  \question[10] % R-13.14 
+  Draw the compact representation of the suffix trie for the string: ``minimize minime''.
+
+  \begin{solution}
+    % Write your solution here
+  \end{solution}
+
+  \question[10]% C-13.43
+  Give an efficient algorithm for deleting a string from a standard trie and
+  analyze its running time.
+
+  \begin{solution}
+    % Write your solution here
+  \end{solution}
+  
+  \question[10]  % C-13.45
+  Describe an algorithm for constructing the compact representation of a suffix trie, given its noncompact representation, and analyze its running time.
+
+  \begin{solution}
+    % Write your solution here
+  \end{solution}
+
+  \begin{EnvUplevel}
+    The following questions refer to the 2 tables below.
+
+    \begin{tabular}{c@{\hspace{50pt}}c}
+      \begin{tabular}{|l|r|r|}
+        \hline
+        term & df$_t$ & idf$_t$\\\hline
+        car & 18165 & 1.65\\
+        auto & 6723 & 2.08\\
+        insurance & 19241 & 1.62\\
+        best & 25235 & 1.5\\
+        \hline
+      \end{tabular}
+             &
+               \begin{tabular}{|l|r|r|r|}
+                 \hline
+                 & Doc 1 & Doc 2 & Doc 3\\\hline
+                 car & 27 & 4 & 24\\
+                 auto & 3 & 33 & 0\\
+                 insurance & 0 & 33 & 29\\
+                 best & 14 & 0 & 17 \\\hline
+               \end{tabular}\\
+      Table 1 & Table 2
+    \end{tabular}
+  \end{EnvUplevel}
+
+  \question[10]
+  Consider the table of term frequencies for 3 documents denoted Doc1, Doc2, Doc3 in Table 2. Compute the tf-idf weights for the terms {\tt car, auto, insurance, best}, for each document, using the idf values from Table 1.
+
+  \begin{solution}
+    % Write your solution here
+  \end{solution}
+
+  \question[10]
+  \label{q:weights}
+  Compute the Euclidean normalized document vectors for each of the documents in Table 2, where each vector has four components, one for each of the four terms.
+
+  \begin{solution}
+    % Write your solution here
+  \end{solution}
+
+  \question
+  With term weights as computed in the Question \ref{q:weights}, rank the three documents from Table 2 by computed score for the query {\tt car insurance}, for each of the following cases of term weighting in the query.
+  \begin{parts}
+    \part[5] The weight of a term is 1 if present in the query, 0 otherwise.
+
+    \begin{solution}
+      % Write your solution here
+    \end{solution}
+    \part[5] Euclidean normalized idf.
+
+    \begin{solution}
+      % Write your solution here
+    \end{solution}
+  \end{parts}
+
+  \qformat{{\large\bf \thequestiontitle}\hfill[\totalpoints\ points]}
+  \titledquestion{Programming Questions}
+  The python skeleton files for each of the folloiwng will be added shortly.
+  \begin{parts}
+    \part Code a class to represent a generalized suffix tree. Words are added to it one at a time and it supports the usual query functions. Test it on a sample word list, e.g. the one at \url{http://thinkpython2.com/code/words.txt}.
+    \part Code a class to represent an invertex index. Documents are added to it one at a time and it supports the usual query functions. Test it on a sample corpus, e.g. \href{https://archive.ics.uci.edu/ml/datasets/Reuters+RCV1+RCV2+Multilingual\%2C+Multiview+Text+Categorization+Test+collection}{Reuters RCV1}.
+  \end{parts}      
+
+\end{questions}
+
+\end{document}
